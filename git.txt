@@ -1,0 +1,99 @@
+Aquí voy a ir dejando los comentarios sobre cada comando usado en la práctica.
+Los comandos a usar son los siguentes: 
+git clone
+git status
+git add
+git commit
+git push
+git checkout
+
+
+Primero, tuve que copiarme el repositorio del fork dado en mi cuenta de github. Una vez hecho esto, creo el .txt para poder ir 
+comentando el resto de procedimientos. 
+
+1. git clone https://github.com/gitt-3-pat/p1
+------------- Impreso en la terminal: 
+Cloning into 'p1'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 5 (from 1)
+Receiving objects: 100% (6/6), done.
+------------------
+
+Sirve para descargar el repositorio de la nube (GitHub()) al ordenador local desde el que estoy trabajando. Ahora, en la carpeta p1 
+puedo encontrar el mismo archivo README.md. Si hubiera más archivos, también los encontraría dentro de la carpeta 'p1'.  
+
+2. git status 
+Para ello, ejecuto 'cd p1' para poder trabajar dentro de la carpeta y que los comandos funcionen. 
+-------Impreso en la terminal: 
+On branch main
+Your branch is up to date with 'origin/main'.
+nothing to commit, working tree clean
+---------
+Esto quiere decir que estamos en la rama principal y que no hay cambios en ella. Es decir, que todo está sincronizado y guardado.
+Para ver que este comando funcione, vamos a crear un .txt dentro de la carpeta y veremos si cambia algo. 
+
+----Impreso en la terminal (después de crear y escribir en el .txt)
+On branch main
+Your branch is up to date with 'origin/main'.
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        prueba.txt
+nothing added to commit but untracked files present (use "git add" to track)
+------------
+Aquí vemos la diferencia. Nos devuelve un "tienes este nuevo archivo creado y editado, pero no lo reconozco ya que no está añadido.
+En el caso de querer guardarlo, haz uso de "git add" "). 
+
+3. git add prueba.txt
+Para que reconozca el archivo, debo añadirlo. 
+Aquí no devuelve nada por pantalla, pero si vuelvo a ejecutar "git status", obtengo lo siguiente: 
+------------Impreso por pantalla: 
+On branch main
+Your branch is up to date with 'origin/main'.
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   prueba.txt
+------------------------
+Por tanto, ahora ya tengo el archivo guardado y reconocido. 
+
+Ahora, si vuelvo a editarlo y ejecuto "git status", me aparece lo siguiente: 
+---Impreso por pantalla: 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   prueba.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   prueba.txt
+----------------
+Lo que quiere decir que al haber editado el archivo, los cambios no se han guardado. Para que se guarden, puedo hacer uso de "git add". 
+Para comprobar que l modifiación de ha guardado, vuelvo a hacer uso de git status
+-----Impreso por pantalla: 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   prueba.txt
+---------------
+Como puedo ver, los cambios se han guardado en el archivo. 
+
+Si volviera a editarlo, tendría que seguir el mismo procedimiento (usar "git add" para guardar cambios y "git status" para comprobarlo).
+
+4. git commit -m "añadiendo git.txt con la documentación de la práctica"
+Para ello, primero debo añadir el git.txt a la carpeta "p1" siguiendo el procedimiento anterior. 
+----Impreso por pantalla: 
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   git.txt
+        new file:   prueba.txt
+---------
+Una vez tengo el git.txt, aplico el commit. 
+
