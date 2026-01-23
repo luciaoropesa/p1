@@ -175,7 +175,7 @@ Por tanto, cuando esté en rama_prueba podré ver en la carpeta p1 (desde la izq
 vuelvo a la rama "main", veo que no cuento con ese archivo. 
 
 Por último, sólo queda volver a guardar los cambios realizados en este .txt y mandarlo a la nube, tal y como hemos ido aprendiendo durante la 
-práctica. 
+práctica.  
 
 
 
